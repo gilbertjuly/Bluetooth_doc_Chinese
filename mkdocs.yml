@@ -10,10 +10,11 @@ pages:
 
 
 
-- '蓝牙入门':
-    - 'TBD': 'tbd/test.md'
+- '低功耗蓝牙':
+    - 'BLE入门': 'ble/first.md'
 - 'BlueNRG方案': 
-    - '芯片手册': 'datasheet/core.md'
+    - '概述':     'bluenrg/general.md'
+    - '系统架构': 'bluenrg/arch.md'
 
 
 # Add permalink for sharing

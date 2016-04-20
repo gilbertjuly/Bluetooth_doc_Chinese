@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="http://www.juma.io/doc/zh/1_DM00141263/test/">
+        <link rel="canonical" href="http://www.juma.io/doc/zh/bluenrg/general/">
         <link rel="shortcut icon" href="../../img/jumafav.png">
 
         <title>JUMA 文档中心</title>
@@ -35,9 +35,15 @@
         <div class="navbar-collapse collapse pull-right">
             <ul class="nav navbar-nav">
             
+              <li class="pull-left">
+                
+                <a href="../../ble/first/">低功耗蓝牙</a>
+                
+              </li>
+            
               <li class="pull-left active">
                 
-                <a href="./">BlueNRG翻译</a>
+                <a href="./">BlueNRG方案</a>
                 
               </li>
             
@@ -61,8 +67,8 @@
         <div class="container" id="main-wrapper">
             <div class="toolbar clearfix">
   <ol class="breadcrumb pull-left">
-    <li><a href="./">文档</a></li>
-    <li>芯片手册</li>
+    <li><a href="../../ble/first/">文档</a></li>
+    <li>概述</li>
   </ol>
 
   
@@ -77,36 +83,45 @@
     
       
         
+      
+
+    
+      
+        
           
 
               <li class="active">
-                <a class="itm-l1" href="./">芯片手册</a>
+                <a class="itm-l1" href="./">概述</a>
                 
                   <ul class="nav">
                   
-                    <li class="active "><a href="#_1">数据结构</a></li>
+                    <li class="active "><a href="#_1">概述</a></li>
 <!--                    
                       <ul class="nav nav-l2">
-                        <li><a class="itm-l2" href="#something">SOMETHING</a></li>
-                      </ul>
-                    -->
-                  
-                    <li class=""><a href="#_2">初始化</a></li>
-<!--                    
-                      <ul class="nav nav-l2">
-                        <li><a class="itm-l2" href="#1">1. 函数声明</a></li>
+                        <li><a class="itm-l2" href="#1">1. 主从一体的协议栈</a></li>
                       </ul>
                     
                       <ul class="nav nav-l2">
-                        <li><a class="itm-l2" href="#2">2. 函数功能</a></li>
+                        <li><a class="itm-l2" href="#2">2. 远距离</a></li>
                       </ul>
                     
                       <ul class="nav nav-l2">
-                        <li><a class="itm-l2" href="#3">3. 函数参数</a></li>
+                        <li><a class="itm-l2" href="#3">3. 低功耗</a></li>
+                      </ul>
+                    
+                      <ul class="nav nav-l2">
+                        <li><a class="itm-l2" href="#4">4. 即灵活、又规范</a></li>
                       </ul>
                     -->
                   
                   </ul>
+                
+              </li>
+
+          
+
+              <li class="">
+                <a class="itm-l1" href="../arch/">系统架构</a>
                 
               </li>
 
@@ -124,25 +139,40 @@
 
             <div class="content-body" role="main">
 
-<h1>芯片手册</h1>
+<h1>概述</h1>
 
-<p>TBD</p>
+<p>本文翻译BlueNRG-MS的芯片手册的核心内容。</p>
 <blockquote>
-<p>本系列API目前仅支持nRF51平台。</p>
+<p>源文档是BlueNRG-MS的芯片手册，下载请点击<a href="http://www2.st.com/resource/en/datasheet/bluenrg-ms.pdf">这里</a>。</p>
+<p>关于BlueNRG-MS的所有官方资料，请点击<a href="http://www2.st.com/content/st_com/en/products/wireless-connectivity/bluetooth-bluetooth-low-energy/bluenrg-ms.html">这里</a>。</p>
 </blockquote>
-<p>对于nRF51平台的用户，使用时请引用相应的头文件：</p>
+<hr />
+<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>BlueNRG-MS是低功耗蓝牙(Bluetooth Low Energy, BLE)处理器芯片，主要特点如下：</p>
+<h3 id="1">1. 主从一体的协议栈<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>BlueNRG-MS的后缀'MS'指Master/Slave，该芯片可以支持同时工作于蓝牙的主设备/从设备模式，遵循了蓝牙4.1标准。</p>
+<p>芯片内嵌ARM Cortex-M0内核，实现了低功耗蓝牙协议栈。</p>
+<blockquote>
+<p>主设备/从设备，是蓝牙协议中的技术用语，您可以查阅蓝牙部分的学习资料。</p>
+</blockquote>
+<h3 id="2">2. 远距离<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>BlueNRG-MS芯片端最大可以做到+8 dBm的输出功率。配合普通PCB天线或陶瓷天线，可以轻松达到50米乃至上百米的传输距离，是市面上传输距离最远的低功耗蓝牙芯片。</p>
+<h3 id="3">3. 低功耗<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>API头文件：<a href="https://github.com/JUMA-IO/nRF51_Platform/blob/master/Interface/Include/juma_sdk_api.h">juma_sdk_api.h</a></li>
-<li>数据类型或宏定义参见：<a href="https://github.com/JUMA-IO/nRF51_Platform/blob/master/Interface/Include/juma_sdk_types.h">juma_sdk_types.h</a></li>
+<li>工作电压：1.7V ~ 3.6V;</li>
+<li>支持LDO和DC-DC稳压器;</li>
+<li>发射电流：8.2mA @ 0dBm, 3V;</li>
+<li>发射电流：15mA @ +8dBm, 3V;</li>
+<li>待机电流：1.7uA(BLE协议栈处于工作状态);</li>
 </ul>
-<hr />
-<h2 id="_1">数据结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="something">SOMETHING<a class="headerlink" href="#something" title="Permanent link">&para;</a></h3>
-<hr />
-<h2 id="_2">初始化<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1">1. 函数声明<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<h3 id="2">2. 函数功能<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<h3 id="3">3. 函数参数<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3></div>
+<h3 id="4">4. 即灵活、又规范<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>BlueNRG-MS的典型方案是：BlueNRG-MS+MCU。其中BlueNRG-MS负责完成蓝牙协议栈和蓝牙数据收发，MCU负责完成profile和应用层的事务，MCU和BlueNRG-MS之间通过基于SPI的ACI规范(ACI, Application-Controller Interface)进行交互。</p>
+<p>让我们来对比一下常见的低功耗蓝牙实现方案：</p>
+<ul>
+<li>SoC方案：典型代表为Nordic nRF51822、TI CC254x系列等。它们的优势在于成本更低、系统简单、PCB可以做的小巧。不足之处在于资源有限，比如MCU的计算能力弱，难以实现复杂算法算法；GPIO、ADC、TIMER等数量不多；系统实时性不高等。</li>
+<li>“MCU+蓝牙透传模块”方案：使用SoC作为蓝牙透传模块负责蓝牙通信，外接MCU弥补SoC资源不足的问题。不足之处在于：MCU和蓝牙透传模块之间欠缺标准的指令和总线协议，不同蓝牙透传模块的通信品质参差不齐，而且整体成本不够理想。</li>
+</ul>
+<p>综上，BlueNRG-MS可以灵活配备MCU，和MCU之间又有规范的ACI通信方式，是一个优秀的BLE解决方案。</p></div>
         </div>
 
         

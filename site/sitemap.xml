@@ -4,7 +4,23 @@
     
         
     <url>
-     <loc>http://www.juma.io/doc/zh//1_DM00141263/test/</loc>
+     <loc>http://www.juma.io/doc/zh//ble/first/</loc>
+     <lastmod>2016-04-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://www.juma.io/doc/zh//bluenrg/general/</loc>
+     <lastmod>2016-04-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.juma.io/doc/zh//bluenrg/arch/</loc>
      <lastmod>2016-04-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
