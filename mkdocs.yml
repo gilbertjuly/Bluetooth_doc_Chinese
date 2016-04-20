@@ -1,0 +1,22 @@
+site_name: JUMA 文档中心
+site_url: http://www.juma.io/doc/zh/
+repo_url: https://github.com/JUMA-IO/JUMA_Docs
+docs_dir: sources
+theme_dir: theme/updocs
+#theme: bootstrap
+copyright: Copyright &copy; 2015, JUMA
+
+pages:
+
+
+
+- '蓝牙入门':
+    - 'TBD': 'tbd/test.md'
+- 'BlueNRG方案': 
+    - '芯片手册': 'datasheet/core.md'
+
+
+# Add permalink for sharing
+markdown_extensions:
+    - toc:
+        permalink: True
