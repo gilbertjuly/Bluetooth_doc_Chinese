@@ -15,6 +15,7 @@ pages:
 - 'BlueNRG方案': 
     - '概述':     'bluenrg/general.md'
     - '系统架构': 'bluenrg/arch.md'
+    - 'ACI报文格式': 'bluenrg/aci.md'
 
 
 # Add permalink for sharing
